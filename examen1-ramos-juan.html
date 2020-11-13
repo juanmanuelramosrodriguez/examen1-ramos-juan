@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>EXAMEN DOM</title>
+     <Script type="text/javascript">
+
+
+     window.onload = function agregarme(){
+      document.getElementById("demo").innerHTML = "Nombre: JUAN MANUEL RAMOS RODRIGUEZ";
+      document.getElementById("demo2").innerHTML = "Numero de control: 17390361";
+        
+     }
+     function agregar(){
+         
+         const listPersonaje = document.getElementById('ps');
+         const listPelicula = document.getElementById('pl');
+                  
+         const newPer = document.createElement('li');
+         const newPL = document.createElement('li');
+
+
+         
+         newPer.textContent= document.getElementById("personajeFavorito").value;
+         newPL.textContent= document.getElementById("peliculaFavorita").value;
+
+         
+         ps.appendChild(newPer);
+         pl.appendChild(newPL);
+
+
+        var favorita = new Array();
+        fav = favorita.push(fav());
+
+
+     };
+
+     function fav(){
+        const list= document.getElementById("mias");
+        const mispelis = document.createElement('li');
+        mispelis.textContent= document.getElementById("peliculaFavorita").value;
+        mias.appendChild(mispelis);
+    };
+
+
+     function eliminar(){
+       pl.removeChild(pl.children [
+         prompt("ejemplo 2 = 1")]);
+     };
+
+     
+     </Script>
+ </head>
+ <body>
+     <h1 id="title">Formulario</h1>
+     <div id="yo">
+      <p id="demo">nombre</p>
+      <p id="demo2">numero de control</p>   
+     </div>
+
+     <br>
+  
+     <form  class="form" id="form">
+         
+         <div>
+             <label for="perFavoritos" class="form_label">Personaje Favorito: </label> <br>
+             <input type="text" id="personajeFavorito" name="personajeFavorito"> 
+         </div>
+         <div>
+             <label for="pelFavoritos" class="form_label">Pelicula Favorita: </label> <br>
+             <input type="text" id="peliculaFavorita" name="peliculaFavorita"> 
+         </div>
+         <br>
+         <button id="button" onclick='agregar()' type="button">Enviar</button>
+         
+     </form>
+     <br>
+
+     <div>
+      <p>restale un 1 a la posicion de la pelicula que quieres eliminar </p>
+      <button id="button" onclick='eliminar()' type="button">Eliminar</button>
+       <div id="per">
+        <p id="ps">Personajes favoritos</p>
+       </div>
+
+       
+        <div id="mias">
+          <p>mis peliculas favoritas</p>
+        </div>
+ 
+       <div id="pel">
+         <ol id="pl">Películas favoritas
+           <li >Shrek</li>
+           <li >Un mundo feliz</li>
+           <li >La vida inútil de Pito Pérez</li>
+           <li >El club de la pelea</li>
+         </ol >
+
+         <p>restale un 1 a la posicion de la pelicula que quieres eliminar </p>
+      <button id="button" onclick='eliminar()' type="button">Eliminar</button>
+       </div>
+
+       </div>
+    
+     <style>
+       #per{
+        text-align: center;
+       }
+       #mias{
+        border: 6px dotted black;
+        width: 350px;
+        text-align: justify;
+        list-style-type: upper-roman;
+       }
+       #pel{
+        border: 6px solid black;
+         width: 350px; 
+         
+         
+       }
+       #yo{
+         border: 6px solid black;
+         width: 350px;
+       }
+      #per{
+        border: 8px double black;
+        width: 300px;
+        list-style-position:inside;
+        list-style-type:upper-alpha;
+        
+      }
+
+   </style>
+ </body>
+ </html>
